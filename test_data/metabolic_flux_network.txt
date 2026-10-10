@@ -1,0 +1,17 @@
+# BioGenome Test Data: Metabolic Reaction Flux Network (CO4)
+# Format: Source Sink Capacity Reaction_Name
+# Network: Glycolysis to Krebs Cycle Cellular Respiration
+6 9
+0 1 16 Glucose_to_G6P(Hexokinase)
+0 2 13 Glucose_to_F16BP(PFK1_bypass)
+1 2 10 G6P_to_F16BP(Phosphofructokinase)
+1 3 12 G6P_to_PEP(Enolase_shunt)
+2 4 14 F16BP_to_Pyruvate(Pyruvate_Kinase)
+3 2 9  PEP_to_F16BP(Reverse_Flux)
+3 5 20 PEP_to_Biomass(Citrate_Synthase)
+4 3 7  Pyruvate_to_PEP(PEPCK)
+4 5 4  Pyruvate_to_Biomass(PDH_Complex)
+Source: 0 (Extracellular Glucose)
+Sink: 5 (Cellular ATP / Biomass Yield)
+Expected Max Flow = 23
+Expected Min-Cut Bottleneck Edges: (G6P -> PEP, F1,6BP -> Pyruvate)

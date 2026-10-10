@@ -1,0 +1,34 @@
+# BioGenome Test Data: NP Reduction & 2-Approximation for Viral Mutation Primers (CO5)
+
+[3-SAT_Regulatory_Clauses]
+Variables: 3 (x1: Transcription_Factor_A, x2: Repressor_B, x3: Enhancer_C)
+Clauses: 3
+Clause_1:  1 -2  3    # (x1 OR NOT x2 OR x3)
+Clause_2: -1  2 -3    # (NOT x1 OR x2 OR NOT x3)
+Clause_3:  1  2  3    # (x1 OR x2 OR x3)
+Satisfying Certificate: x1=TRUE, x2=TRUE, x3=FALSE
+
+[Viral_Mutant_Cross_Reactivity_Graph]
+Vertices: 8 (SARS-CoV-2 / Influenza Mutation Targets)
+0 Strain_Alpha(P681H)
+1 Strain_Beta(K417N)
+2 Strain_Gamma(E484K)
+3 Strain_Delta(L452R)
+4 Strain_Omicron_BA1
+5 Strain_Omicron_BA2
+6 Strain_Omicron_BA5
+7 Strain_Omicron_XBB
+
+Edges (Co-occurring Mutational Coverage Requirements):
+0 1
+1 2
+2 3
+3 4
+4 5
+5 6
+6 7
+4 7
+2 4
+
+Approximate Cover Size (Gavril Heuristic): <= 2 * OPT
+Provable Ratio: <= 2.0

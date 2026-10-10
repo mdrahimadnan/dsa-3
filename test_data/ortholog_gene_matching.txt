@@ -1,0 +1,30 @@
+# BioGenome Test Data: Orthologous Gene Matching & Bipartite Assignment (CO4)
+# Left Partition: Human Oncogenes / Tumor Suppressors
+# Right Partition: Mus musculus (Mouse) Homologs
+# Edges represent BLAST sequence identity >= 80%
+
+[Left_Genes_Homo_Sapiens]
+0 Human_TP53
+1 Human_BRCA1
+2 Human_EGFR
+3 Human_MYC
+4 Human_INS
+
+[Right_Genes_Mus_Musculus]
+0 Mouse_Trp53
+1 Mouse_Brca1
+2 Mouse_Egfr
+3 Mouse_Myc
+4 Mouse_Ins1
+5 Mouse_Ins2
+
+[Homology_Edges]
+0 0   # TP53 <-> Trp53
+1 1   # BRCA1 <-> Brca1
+2 2   # EGFR <-> Egfr
+3 3   # MYC <-> Myc
+4 4   # INS <-> Ins1
+4 5   # INS <-> Ins2 (Paralogous Duplication)
+
+Maximum Matching Cardinality: 5
+König Min-Vertex Cover Cardinality: 5

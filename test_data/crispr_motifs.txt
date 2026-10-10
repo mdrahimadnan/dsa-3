@@ -1,0 +1,9 @@
+# CRISPR PAM Motifs (Streptococcus pyogenes Cas9 target recognition)
+# Text: Viral genomic sequence
+# Motifs to detect concurrently:
+MOTIF_1=NGG
+MOTIF_2=AGG
+MOTIF_3=CGG
+MOTIF_4=TGG
+MOTIF_5=GGG
+VIRAL_DNA=ATGCGATCGGATAGCTAGGAACCGGTTTAGGATACGGGAT

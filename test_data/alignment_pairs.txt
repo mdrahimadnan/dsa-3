@@ -1,0 +1,15 @@
+# Pair 1: Global Alignment Test (Needleman-Wunsch)
+# Sequence A: Human Beta-Globin fragment
+# Sequence B: Chimp Beta-Globin fragment
+SEQ1=ACATGCTACGTGACGTAG
+SEQ2=ACATGCTTCGTGACGTAG
+
+# Pair 2: Local Alignment Test (Smith-Waterman)
+# Sequence 1: Long regulatory promoter region
+# Sequence 2: Transcription factor binding site inside promoter
+SEQ_LONG=GGATCGATCGATCGATTGTTACGGAATTCGATCGATC
+SEQ_PROMOTER=TGTTACGG
+
+# Pair 3: Mutation Detection (Levenshtein Edit Distance)
+ORIGINAL_GENE=AACGTACTGAC
+MUTATED_GENE=AACCTACTGAT
